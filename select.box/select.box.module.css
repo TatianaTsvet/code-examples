@@ -1,0 +1,83 @@
+.root {
+  @apply flex justify-between items-center font-sans w-full;
+
+  & .__hovered {
+    @apply text-gray-800;
+  }
+}
+
+.option {
+  @apply m-2 flex gap-1 justify-between items-center w-full;
+}
+
+.width {
+  @apply w-full;
+}
+
+.list {
+  @apply p-0 list-none text-xs font-medium cursor-pointer;
+  @apply max-h-60 overflow-auto border rounded;
+  @nest :global(:root.dark) & {
+    @apply border-gray-700;
+  }
+}
+
+.disabled {
+  @apply opacity-50;
+}
+
+.focused {
+  @apply bg-gray-100 font-semibold;
+
+  @nest :global(:root.dark) & {
+    @apply text-white bg-gray-900;
+  }
+}
+
+.selected {
+  @apply text-blue-500 font-semibold;
+}
+
+.icon {
+  @apply w-4 h-4 flex-none;
+}
+
+.open_icon {
+  @apply w-3 h-3 mr-[13px] text-gray-800;
+
+  @nest :global(:root.dark) & {
+    @apply text-white;
+  }
+}
+
+.hovered {
+  @apply bg-blue-500 text-white font-semibold;
+
+  @nest :global(:root.dark) & {
+    @apply bg-blue-500 text-white;
+  }
+}
+
+.button {
+  @apply mb-1 text-xs font-medium h-8;
+  @nest :global(:root.dark) & {
+    @apply text-white;
+  }
+}
+.not_selected {
+  @apply text-gray-500;
+}
+
+.button_child {
+  @apply mr-2 max-h-7 truncate font-sans font-medium text-xs;
+}
+.button_icon {
+  @apply w-3 h-3 text-gray-800;
+  @nest :global(:root.dark) & {
+    @apply text-gray-500;
+  }
+}
+
+.border {
+  @apply rounded;
+}
